@@ -6,7 +6,7 @@
 // @icon         https://www.jeuxvideo.com/favicon.png
 // @license      MIT
 //
-// @version      1.0.6
+// @version      1.0.7
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -28,7 +28,7 @@ loadMenu();
 /** **************************************************************************************************************
  *  FUNCTION
  ************************************************************************************************************** */
-// Config menu
+// Config menusafa
 function loadMenu() {
   const position = document.querySelector('.header__globalUser');
   let htmlMenuElement = '';
@@ -41,5 +41,5 @@ function loadMenu() {
   htmlMenuElement += '</div>';
   htmlMenuElement += '</div>';
 
-  position.append = htmlMenuElement;
+  position.innerHTML = position.innerHTML + htmlMenuElement;
 }
