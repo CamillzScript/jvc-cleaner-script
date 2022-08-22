@@ -14,7 +14,7 @@
 // @match        https://www.jeuxvideo.com/*
 //
 // @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcConfigMenu.v1.0.11.js
-// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcRemoveSectionOnHomepage.v1.0.1.js
+// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcRemoveSectionOnHomepage.v1.0.2.js
 // @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jcvTemplateCleaner.v1.0.0.js
 // @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcTopComment.v1.0.0.js
 //

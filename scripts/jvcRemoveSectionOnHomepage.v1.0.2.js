@@ -12,8 +12,8 @@ function startScript() {
   if ('/' === path) {
     const sections = document.querySelectorAll('.layout__content section');
     const jvTechSections = document.querySelectorAll('.layout__contentAfter section');
-    let jvsCleanerScriptIsSections = false;
-    let jvcCleanerScriptIsJvTechSections = false;
+    let jvsCleanerScriptIsSections = true;
+    let jvcCleanerScriptIsJvTechSections = true;
 
     if ('0' === localStorage.getItem('en-ce-moment')) {
       document.querySelector('.layout__contentHeader').style.display = 'none';
@@ -27,14 +27,14 @@ function startScript() {
     if ('0' === localStorage.getItem('derniers-test').toString()) {
       sections[0].style.display = 'none';
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('dernieres-news-de-jeux')) {
       sections[1].style.display = 'none';
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
@@ -42,14 +42,14 @@ function startScript() {
       sections[2].style.display = 'none';
       document.querySelector('.layout__content .secondaryNav').setAttribute('style', 'display: none !important');
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('jeux-les-plus-populaires')) {
       sections[3].style.display = 'none';
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
@@ -57,28 +57,28 @@ function startScript() {
       sections[4].style.display = 'none';
       document.querySelector('.layout__content .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('les-jeux-les-plus-attendus')) {
       sections[5].style.display = 'none';
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('meilleurs-jeux-du-moment')) {
       sections[6].style.display = 'none';
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('dernieres-videos-gameplay')) {
       sections[7].style.display = 'none';
       jvsCleanerScriptIsSections = false;
-    } else {
+    } else if (false !== jvsCleanerScriptIsSections) {
       jvsCleanerScriptIsSections = true;
     }
 
