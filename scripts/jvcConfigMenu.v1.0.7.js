@@ -129,8 +129,11 @@ function jvcCleanerScriptLoadMenu() {
     htmlMenuElement += 'checked> Afficher</label>';
   }
   else if (null === localStorage.getItem('input-ads-show')) {
-    localStorage.setItem('input-ads-show', '1');
-    htmlMenuElement += 'checked> Afficher</label>';
+    localStorage.setItem('input-ads-show', '0');
+    htmlMenuElement += '> Afficher</label>';
+  }
+  else {
+    htmlMenuElement += '> Afficher</label>';
   }
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
