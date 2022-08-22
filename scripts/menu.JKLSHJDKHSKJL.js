@@ -79,7 +79,7 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '</div><div style="float: left; width: 50%">';
   htmlMenuElement += '<h4>Options</4>';
   htmlMenuElement += '<h6>Top commentaires</h6>';
-  htmlMenuElement += '<label><input type="switch" id="JVC-cleaner-script-menu-input-score-show">Score haut</label>';
+  htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-score-show">Afficher</label>';
   htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-up">Score haut</label>';
   htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-down">Score bas</label>';
   htmlMenuElement += '<hr />';
