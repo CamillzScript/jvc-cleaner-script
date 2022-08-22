@@ -76,7 +76,8 @@ function jvcCleanerScriptLoadMenu() {
     htmlMenuElement += '</label></span><br />';
   })
 
-  htmlMenuElement += '</div><div style="float: left; width: 22em">'
+  htmlMenuElement += '</div><div style="float: left; width: 22em">';
+  htmlMenuElement += '<h4>Options</4>'
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
   htmlMenuElement += '</div></div>';
