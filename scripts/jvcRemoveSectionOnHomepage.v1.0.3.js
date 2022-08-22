@@ -26,60 +26,36 @@ function startScript() {
 
     if ('0' === localStorage.getItem('derniers-test').toString()) {
       sections[0].style.display = 'none';
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('dernieres-news-de-jeux')) {
       sections[1].style.display = 'none';
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('derniers-videos-test-de-jeux')) {
       sections[2].style.display = 'none';
       document.querySelector('.layout__content .secondaryNav').setAttribute('style', 'display: none !important');
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('jeux-les-plus-populaires')) {
       sections[3].style.display = 'none';
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('dernieres-astuces')) {
       sections[4].style.display = 'none';
       document.querySelector('.layout__content .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('les-jeux-les-plus-attendus')) {
       sections[5].style.display = 'none';
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('meilleurs-jeux-du-moment')) {
       sections[6].style.display = 'none';
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if ('0' === localStorage.getItem('dernieres-videos-gameplay')) {
       sections[7].style.display = 'none';
-      jvsCleanerScriptIsSections = false;
-    } else if (false !== jvsCleanerScriptIsSections) {
-      jvsCleanerScriptIsSections = true;
     }
 
     if (!jvsCleanerScriptIsSections) {
@@ -88,30 +64,18 @@ function startScript() {
 
     if ('0' === localStorage.getItem('bon-plans-high-tech')) {
       jvTechSections[0].style.display = 'none';
-      jvcCleanerScriptIsJvTechSections = false;
-    } else {
-      jvcCleanerScriptIsJvTechSections = true;
     }
 
     if ('0' === localStorage.getItem('derniers-test-high-tech')) {
       jvTechSections[1].style.display = 'none';
-      jvcCleanerScriptIsJvTechSections = false;
-    } else {
-      jvcCleanerScriptIsJvTechSections = true;
     }
 
     if ('0' === localStorage.getItem('derniers-guides-d-achat')) {
       jvTechSections[2].style.display = 'none';
-      jvcCleanerScriptIsJvTechSections = false;
-    } else {
-      jvcCleanerScriptIsJvTechSections = true;
     }
 
     if ('0' === localStorage.getItem('dernieres-news-hardware')) {
       jvTechSections[3].style.display = 'none';
-      jvcCleanerScriptIsJvTechSections = false;
-    } else {
-      jvcCleanerScriptIsJvTechSections = true;
     }
 
     if (!jvcCleanerScriptIsJvTechSections) {
