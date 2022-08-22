@@ -13,7 +13,7 @@
 //
 // @match        https://www.jeuxvideo.com/*
 //
-// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcConfigMenu.v1.0.0.js
+// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcConfigMenu.v1.0.1.js
 //
 // @noframes
 // ==/UserScript==
