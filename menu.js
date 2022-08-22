@@ -21,7 +21,6 @@ jvcCleanerScriptCheckboxList.forEach((element, index) => {
     } else {
       localStorage.setItem(element.getAttribute('data-id'), '0');
     }
-    jvcCleanerScriptMenuCheckboxClick(index);
   });
 });
 
@@ -54,9 +53,10 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<i class="icon-check-jv"></i>';
   htmlMenuElement += '</div>';
 
-  htmlMenuElement += '<div id="JVC-cleaner-script-menu" style="display: none; position: absolute; padding: 1em; top: 4em; right: 1em; width: 22em; z-index: 10000000000; background-color: #18191b; color: #FFF; border: 1px solid #FFF">';
+  htmlMenuElement += '<div id="JVC-cleaner-script-menu" style="display: none; position: absolute; padding: 1em; top: 4em; right: 1em; width: 44em; z-index: 10000000000; background-color: #18191b; color: #FFF; border: 1px solid #FFF">';
   htmlMenuElement += '<h4>JVC Cleaner</h4>';
   htmlMenuElement += '<hr />';
+  htmlMenuElement += '<div style="float: left; width: 22em">'
   htmlMenuElement += '<h5>Afficher sur la page d\'accueil</h5>';
 
   jvcCleanerScriptMenuCheckboxItemList.forEach((element) => {
@@ -76,11 +76,10 @@ function jvcCleanerScriptLoadMenu() {
     htmlMenuElement += '</label></span><br />';
   })
 
-  htmlMenuElement += '</div>';
+  htmlMenuElement += '</div><div style="float: left; width: 22em">'
+  htmlMenuElement += '<hr />';
+  htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
+  htmlMenuElement += '</div></div>';
 
   position.innerHTML = position.innerHTML + htmlMenuElement;
-}
-
-function jvcCleanerScriptMenuCheckboxClick(index) {
-  console.log(jvcCleanerScriptCheckboxList[index]);
 }
