@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.10
+// @version      1.0.11
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -18,4 +18,4 @@
 // @noframes
 // ==/UserScript==
 
-console.log('JVC Script loaded - v1.0.10a');
+console.log('JVC Script loaded - v1.0.11a');
