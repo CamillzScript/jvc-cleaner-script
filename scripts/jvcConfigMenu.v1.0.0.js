@@ -99,6 +99,10 @@ function jvcCleanerScriptLoadMenu() {
 }
 
 function jvcCleanerScriptLoadMenuOption() {
+  const jvcCleanerScriptMenuInputScoreShow = document.getElementById('JVC-cleaner-script-menu-input-score-show');
+  const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-down');
+  const jvcCleanerScriptMenuInputScoreDown = document.getElementById('JVC-cleaner-script-menu-input-score-down');
+  
   if (null !== localStorage.getItem('input-score-show') && '1' === localStorage.getItem('input-score-show')) {
     jvcCleanerScriptMenuInputScoreShow.checked = true;
   }
