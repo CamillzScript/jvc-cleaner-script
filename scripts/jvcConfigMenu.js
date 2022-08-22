@@ -1,4 +1,9 @@
 jvcCleanerScriptLoadMenu();
+jvcCleanerScriptLoadMenuOption();
+
+const jvcCleanerScriptMenuInputScoreShow = document.getElementById('JVC-cleaner-script-menu-input-score-show');
+const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-down');
+const jvcCleanerScriptMenuInputScoreDown = document.getElementById('JVC-cleaner-script-menu-input-score-down');
 
 const jvcCleanerScriptConfigMenuButton = document.getElementById('JVC-cleaner-script-menu-button');
 jvcCleanerScriptConfigMenuButton.addEventListener('click', () => {
@@ -81,8 +86,8 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<h6>Top commentaires</h6>';
   htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-score-show" style="margin-bottom: .5em" checked> Afficher</label><br />';
-  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-up" style="width: 2em; margin-bottom: .5em"> Score haut</label><br />';
-  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-down" style="width: 2em"> Score bas</label>';
+  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-up" style="width: 2em; margin-bottom: .5em"> Score haut (upvote)</label><br />';
+  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-down" style="width: 2em"> Score bas (downvote)</label>';
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<h6>Liens sponsorisé dans les news</h6>';
   htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-show-ads-link"> Afficher</label>';
@@ -92,3 +97,48 @@ function jvcCleanerScriptLoadMenu() {
 
   position.innerHTML = position.innerHTML + htmlMenuElement;
 }
+
+function jvcCleanerScriptLoadMenuOption() {
+  if (null !== localStorage.getItem('input-score-show') && '1' === localStorage.getItem('input-score-show')) {
+    jvcCleanerScriptMenuInputScoreShow.checked = true;
+  }
+  else if (null === localStorage.getItem('input-score-show')) {
+    jvcCleanerScriptMenuInputScoreShow.checked = true;
+  }
+  else {
+    jvcCleanerScriptMenuInputScoreShow.checked = false;
+  }
+
+  if (null !== localStorage.getItem('input-score-up')) {
+    jvcCleanerScriptMenuInputScoreUp.value = localStorage.getItem('input-score-up');
+  }
+  else {
+    localStorage.setItem('input-score-down', '5');
+    jvcCleanerScriptMenuInputScoreUp.value = '5';
+  }
+
+  if (null !== localStorage.getItem('input-score-down')) {
+    jvcCleanerScriptMenuInputScoreUp.value = localStorage.getItem('input-score-down');
+  }
+  else {
+    localStorage.setItem('input-score-down', '10');
+    jvcCleanerScriptMenuInputScoreDown.value = '10';
+  }
+}
+
+jvcCleanerScriptMenuInputScoreShow.addEventListener('change', () => {
+  if (jvcCleanerScriptMenuInputScoreShow.checked === true) {
+    localStorage.setItem('input-score-show', '1');
+  }
+  else {
+    localStorage.setItem('input-score-show', '0');
+  }
+});
+
+jvcCleanerScriptMenuInputScoreUp.addEventListener('change', () => {
+  localStorage.setItem('input-score-up', jvcCleanerScriptMenuInputScoreUp.value);
+});
+
+jvcCleanerScriptMenuInputScoreDown.addEventListener('change', () => {
+  localStorage.setItem('input-score-down', jvcCleanerScriptMenuInputScoreDown.value);
+});
