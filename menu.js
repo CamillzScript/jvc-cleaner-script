@@ -60,7 +60,6 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<h5>Afficher sur la page d\'accueil</h5>';
 
   jvcCleanerScriptMenuCheckboxItemList.forEach((element) => {
-    console.log(element);
     htmlMenuElement += '<span><label><input type="checkbox" ';
 
     if (null !== localStorage.getItem(element[0]) && '1' === localStorage.getItem(element[0])) {
@@ -83,6 +82,5 @@ function jvcCleanerScriptLoadMenu() {
 }
 
 function jvcCleanerScriptMenuCheckboxClick(index) {
-  const jvcCleanerScriptCheckboxList = document.querySelectorAll('#JVC-cleaner-script-menu-input-show');
-
+  console.log(jvcCleanerScriptCheckboxList[index]);
 }

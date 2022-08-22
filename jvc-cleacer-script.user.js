@@ -17,3 +17,5 @@
 //
 // @noframes
 // ==/UserScript==
+
+console.log('JVC Script loaded - v1.0.10a');
