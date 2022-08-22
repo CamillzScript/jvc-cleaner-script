@@ -78,10 +78,14 @@ function jvcCleanerScriptLoadMenu() {
 
   htmlMenuElement += '</div><div style="float: left; width: 50%">';
   htmlMenuElement += '<h4>Options</4>';
+  htmlMenuElement += '<hr />';
   htmlMenuElement += '<h6>Top commentaires</h6>';
-  htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-score-show">Afficher</label><br /><br />';
-  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-up">Score haut</label><br /><br />';
-  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-down">Score bas</label><br /><br />';
+  htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-score-show" style="margin-bottom: .5em" checked> Afficher</label><br /><br />';
+  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-up" style="width: 2em; margin-bottom: .5em"> Score haut</label><br /><br />';
+  htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-down" style="width: 2em"> Score bas</label><br /><br />';
+  htmlMenuElement += '<hr />';
+  htmlMenuElement += '<h6>Liens sponsorisé dans les news</h6>';
+  htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-show-ads-link"> Afficher</label>';
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
   htmlMenuElement += '</div></div>';

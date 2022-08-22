@@ -6,7 +6,6 @@ Cleaner pour jeuxvideo.com.
 - Définir les sections que l'on veut voir apprêter sur la page d'accueil du site.
 - Définir si les liens sponsorisé doivent être visible.
 - Ajouter les "top commentaires" sur les pages d'actualité.
-- Choisir si les "top commentaires" seront colorisé en fonction de leur score positif et négatif.
 - Définir les scores pour les "top commentaires".
 
 ## Objectifs
