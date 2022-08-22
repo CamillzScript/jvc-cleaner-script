@@ -56,7 +56,7 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<div id="JVC-cleaner-script-menu" style="display: none; position: absolute; padding: 1em; top: 4em; right: 1em; width: 44em; z-index: 10000000000; background-color: #18191b; color: #FFF; border: 1px solid #FFF">';
   htmlMenuElement += '<h4>JVC Cleaner</h4>';
   htmlMenuElement += '<hr />';
-  htmlMenuElement += '<div style="float: left; width: 22em">'
+  htmlMenuElement += '<div style="float: left; width: 50%">'
   htmlMenuElement += '<h5>Afficher sur la page d\'accueil</h5>';
 
   jvcCleanerScriptMenuCheckboxItemList.forEach((element) => {
@@ -76,7 +76,7 @@ function jvcCleanerScriptLoadMenu() {
     htmlMenuElement += '</label></span><br />';
   })
 
-  htmlMenuElement += '</div><div style="float: left; width: 22em">';
+  htmlMenuElement += '</div><div style="float: left; width: 50%">';
   htmlMenuElement += '<h4>Options</4>'
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
