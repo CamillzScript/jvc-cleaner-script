@@ -5,12 +5,6 @@ const path = document.location.href.replace('https://www.jeuxvideo.com', '');
  ************************************************************************************************************** */
 startScript();
 
-document.querySelector('.layout__content .pt-5').setAttribute('style', 'padding-top: 0 !important');
-document.querySelector('.layout__contentAfter .section__groupTitle.mb-5').setAttribute('style', 'display: none !important; margin-bottom: 0 !important');
-document.querySelector('.layout__contentAfter .pt-5').setAttribute('style', 'padding-top: 0 !important');
-document.querySelector('.layout__contentMain .bg-body').setAttribute('style', 'background-color: #282A2F !important');
-document.querySelector('.layout__contentAfter .bg-body').setAttribute('style', 'background-color: #282A2F !important');
-
 /** **************************************************************************************************************
  *  FUNCTION
  ************************************************************************************************************** */
@@ -91,6 +85,12 @@ function startScript() {
     if ('0' === localStorage.getItem('nos-emissions')) {
       document.querySelector('.layout__contextBottom').style.display = 'none';
     }
+
+    document.querySelector('.layout__content .pt-5').setAttribute('style', 'padding-top: 0 !important');
+    document.querySelector('.layout__contentAfter .section__groupTitle.mb-5').setAttribute('style', 'display: none !important; margin-bottom: 0 !important');
+    document.querySelector('.layout__contentAfter .pt-5').setAttribute('style', 'padding-top: 0 !important');
+    document.querySelector('.layout__contentMain .bg-body').setAttribute('style', 'background-color: #282A2F !important');
+    document.querySelector('.layout__contentAfter .bg-body').setAttribute('style', 'background-color: #282A2F !important');
 
   }
 
