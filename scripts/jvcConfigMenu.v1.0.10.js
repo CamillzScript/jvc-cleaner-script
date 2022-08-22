@@ -68,7 +68,7 @@ jvcCleanerScriptMenuInputAdsLink.addEventListener('change', () => {
  ************************************************************************************************************** */
 // Config menusafa
 function jvcCleanerScriptLoadMenu() {
-  const position = document.querySelector('header');
+  const position = document.querySelector('.footer');
   const jvcCleanerScriptMenuCheckboxItemList = [
     ['en-ce-moment', 'EN CE MOMENT'],
     ['dernieres-news-jv', 'DERNIÈRES NEWS JV'],
@@ -139,8 +139,7 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
   htmlMenuElement += '</div></div>';
 
-  // position.innerHTML = position.innerHTML + htmlMenuElement;
-  position.parentNode.insertBefore(htmlMenuElement, position.nextSibling);
+  position.innerHTML = position.innerHTML + htmlMenuElement;
 }
 
 function jvcCleanerScriptLoadMenuOption() {
