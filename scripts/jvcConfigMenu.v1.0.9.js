@@ -140,7 +140,7 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '</div></div>';
 
   // position.innerHTML = position.innerHTML + htmlMenuElement;
-  position.parentNode.insertBefore(htmlMenuElement, referenceNode.nextSibling);
+  position.parentNode.insertBefore(htmlMenuElement, position.nextSibling);
 }
 
 function jvcCleanerScriptLoadMenuOption() {
