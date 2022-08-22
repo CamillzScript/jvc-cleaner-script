@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.27
+// @version      1.0.28
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -14,6 +14,7 @@
 // @match        https://www.jeuxvideo.com/*
 //
 // @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcConfigMenu.v1.0.10.js
+// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/jvcRemoveSectionOnHopage.v1.0.0.js
 //
 // @noframes
 // ==/UserScript==
