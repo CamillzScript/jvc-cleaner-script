@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.11
+// @version      1.0.12
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -13,9 +13,9 @@
 //
 // @match        https://www.jeuxvideo.com/*
 //
-// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/menu.js
+// @require      https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/scripts/menu.JKLSHJDKHSKJL.js
 //
 // @noframes
 // ==/UserScript==
 
-console.log('JVC Script loaded - v1.0.11a');
+console.log('JVC Script loaded - v1.0.12a');
