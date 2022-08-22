@@ -15,4 +15,4 @@ class NavItem
   }
 }
 
-eport default NavItem;
+export default NavItem;
