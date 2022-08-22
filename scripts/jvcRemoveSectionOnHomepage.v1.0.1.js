@@ -15,8 +15,6 @@ function startScript() {
     let jvsCleanerScriptIsSections = false;
     let jvcCleanerScriptIsJvTechSections = false;
 
-    console.log(jvsCleanerScriptIsSections, jvcCleanerScriptIsJvTechSections);
-
     if ('0' === localStorage.getItem('en-ce-moment')) {
       document.querySelector('.layout__contentHeader').style.display = 'none';
       document.querySelector('.layout__contentBefore').style.display = 'none';
