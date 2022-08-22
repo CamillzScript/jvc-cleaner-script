@@ -6,7 +6,7 @@
 // @icon         https://www.jeuxvideo.com/favicon.png
 // @license      MIT
 //
-// @version      1.0.2
+// @version      1.0.3
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -23,5 +23,5 @@
 
 GM_addElement('script', {
   src: 'https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/modules/navitem.mjs',
-  type: 'module'
+  type: 'text/script'
 })
