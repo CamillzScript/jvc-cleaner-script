@@ -35,6 +35,7 @@ jvcCleanerScriptLoadMenuOption();
 const jvcCleanerScriptMenuInputScoreShow = document.getElementById('JVC-cleaner-script-menu-input-score-show');
 const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-up');
 const jvcCleanerScriptMenuInputScoreDown = document.getElementById('JVC-cleaner-script-menu-input-score-down');
+const jvcCleanerScriptMenuInputAdsLink = document.getElementById('JVC-cleaner-script-menu-input-show-ads-link');
 
 jvcCleanerScriptMenuInputScoreShow.addEventListener('change', () => {
   if (jvcCleanerScriptMenuInputScoreShow.checked === true) {
@@ -51,6 +52,15 @@ jvcCleanerScriptMenuInputScoreUp.addEventListener('change', () => {
 
 jvcCleanerScriptMenuInputScoreDown.addEventListener('change', () => {
   localStorage.setItem('input-score-down', jvcCleanerScriptMenuInputScoreDown.value);
+});
+
+jvcCleanerScriptMenuInputAdsLink.addEventListener('change', () => {
+  if (jvcCleanerScriptMenuInputAdsLink.checked === true) {
+    localStorage.setItem('input-ads-show', '1');
+  }
+  else {
+    localStorage.setItem('input-ads-show', '0');
+  }
 });
 
 /** **************************************************************************************************************
@@ -114,7 +124,14 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<label><input type="text" id="JVC-cleaner-script-menu-input-score-down" style="width: 2em"> Score bas (downvote)</label>';
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<h6>Liens sponsorisé dans les news</h6>';
-  htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-show-ads-link"> Afficher</label>';
+  htmlMenuElement += '<label><input type="checkbox" id="JVC-cleaner-script-menu-input-show-ads-link" ';
+  if (null !== localStorage.getItem('input-ads-show') && '1' === localStorage.getItem('input-ads-show')) {
+    htmlMenuElement += 'checked> Afficher</label>';
+  }
+  else if (null === localStorage.getItem('input-ads-show')) {
+    localStorage.setItem('input-ads-show', '1');
+    htmlMenuElement += 'checked> Afficher</label>';
+  }
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
   htmlMenuElement += '</div></div>';
