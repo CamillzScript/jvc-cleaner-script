@@ -3,10 +3,10 @@
 // @description  Cleaner pour jeuxvideo.com.
 // @author       David ROMERA <d.romera.11@gmail.com> | Camillz
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=jeuxvideo.com
+// @icon         https://www.jeuxvideo.com/favicon.png
 // @license      MIT
 //
-// @version      1.0.1
+// @version      1.0.2
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
