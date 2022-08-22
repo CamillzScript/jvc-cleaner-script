@@ -141,7 +141,7 @@ function jvcCleanerScriptLoadMenuOption() {
     jvcCleanerScriptMenuInputScoreUp.value = localStorage.getItem('input-score-up');
   }
   else {
-    localStorage.setItem('input-score-down', '5');
+    localStorage.setItem('input-score-up', '5');
     jvcCleanerScriptMenuInputScoreUp.value = '5';
   }
 
