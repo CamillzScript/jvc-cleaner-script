@@ -1,9 +1,7 @@
+/** **************************************************************************************************************
+ *  LOAD MENU
+ ************************************************************************************************************** */
 jvcCleanerScriptLoadMenu();
-jvcCleanerScriptLoadMenuOption();
-
-const jvcCleanerScriptMenuInputScoreShow = document.getElementById('JVC-cleaner-script-menu-input-score-show');
-const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-down');
-const jvcCleanerScriptMenuInputScoreDown = document.getElementById('JVC-cleaner-script-menu-input-score-down');
 
 const jvcCleanerScriptConfigMenuButton = document.getElementById('JVC-cleaner-script-menu-button');
 jvcCleanerScriptConfigMenuButton.addEventListener('click', () => {
@@ -27,6 +25,32 @@ jvcCleanerScriptCheckboxList.forEach((element, index) => {
       localStorage.setItem(element.getAttribute('data-id'), '0');
     }
   });
+});
+
+/** **************************************************************************************************************
+ *  OPTION MENU
+ ************************************************************************************************************** */
+jvcCleanerScriptLoadMenuOption();
+
+const jvcCleanerScriptMenuInputScoreShow = document.getElementById('JVC-cleaner-script-menu-input-score-show');
+const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-up');
+const jvcCleanerScriptMenuInputScoreDown = document.getElementById('JVC-cleaner-script-menu-input-score-down');
+
+jvcCleanerScriptMenuInputScoreShow.addEventListener('change', () => {
+  if (jvcCleanerScriptMenuInputScoreShow.checked === true) {
+    localStorage.setItem('input-score-show', '1');
+  }
+  else {
+    localStorage.setItem('input-score-show', '0');
+  }
+});
+
+jvcCleanerScriptMenuInputScoreUp.addEventListener('change', () => {
+  localStorage.setItem('input-score-up', jvcCleanerScriptMenuInputScoreUp.value);
+});
+
+jvcCleanerScriptMenuInputScoreDown.addEventListener('change', () => {
+  localStorage.setItem('input-score-down', jvcCleanerScriptMenuInputScoreDown.value);
 });
 
 /** **************************************************************************************************************
@@ -100,9 +124,9 @@ function jvcCleanerScriptLoadMenu() {
 
 function jvcCleanerScriptLoadMenuOption() {
   const jvcCleanerScriptMenuInputScoreShow = document.getElementById('JVC-cleaner-script-menu-input-score-show');
-  const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-down');
+  const jvcCleanerScriptMenuInputScoreUp = document.getElementById('JVC-cleaner-script-menu-input-score-up');
   const jvcCleanerScriptMenuInputScoreDown = document.getElementById('JVC-cleaner-script-menu-input-score-down');
-  
+
   if (null !== localStorage.getItem('input-score-show') && '1' === localStorage.getItem('input-score-show')) {
     jvcCleanerScriptMenuInputScoreShow.checked = true;
   }
@@ -129,20 +153,3 @@ function jvcCleanerScriptLoadMenuOption() {
     jvcCleanerScriptMenuInputScoreDown.value = '10';
   }
 }
-
-jvcCleanerScriptMenuInputScoreShow.addEventListener('change', () => {
-  if (jvcCleanerScriptMenuInputScoreShow.checked === true) {
-    localStorage.setItem('input-score-show', '1');
-  }
-  else {
-    localStorage.setItem('input-score-show', '0');
-  }
-});
-
-jvcCleanerScriptMenuInputScoreUp.addEventListener('change', () => {
-  localStorage.setItem('input-score-up', jvcCleanerScriptMenuInputScoreUp.value);
-});
-
-jvcCleanerScriptMenuInputScoreDown.addEventListener('change', () => {
-  localStorage.setItem('input-score-down', jvcCleanerScriptMenuInputScoreDown.value);
-});
