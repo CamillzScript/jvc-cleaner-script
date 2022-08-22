@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.8
+// @version      1.0.9
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
