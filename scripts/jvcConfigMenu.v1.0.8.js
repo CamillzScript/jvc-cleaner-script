@@ -139,7 +139,8 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
   htmlMenuElement += '</div></div>';
 
-  position.innerHTML = position.innerHTML + htmlMenuElement;
+  // position.innerHTML = position.innerHTML + htmlMenuElement;
+  position.parentNode.insertBefore(htmlMenuElement, referenceNode.nextSibling);
 }
 
 function jvcCleanerScriptLoadMenuOption() {
