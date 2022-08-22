@@ -92,7 +92,7 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '<i class="icon-check-jv"></i>';
   htmlMenuElement += '</div>';
 
-  htmlMenuElement += '<div id="JVC-cleaner-script-menu" style="display: none; position: absolute; padding: 1em; top: 4em; right: 1em; width: 44em; z-index: 10000000000; background-color: #18191b; color: #FFF; border: 1px solid #FFF">';
+  htmlMenuElement += '<div id="JVC-cleaner-script-menu" style="display: none; position: fixed; padding: 1em; top: 4em; right: 1em; width: 44em; z-index: 10000000000; background-color: #18191b; color: #FFF; border: 1px solid #FFF">';
   htmlMenuElement += '<h4>JVC Cleaner</h4>';
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<div style="float: left; width: 50%">'
@@ -169,7 +169,7 @@ function jvcCleanerScriptLoadMenuOption() {
     jvcCleanerScriptMenuInputScoreDown.value = localStorage.getItem('input-score-down');
   }
   else {
-    localStorage.setItem('input-score-down', '10');
-    jvcCleanerScriptMenuInputScoreDown.value = '10';
+    localStorage.setItem('input-score-down', '-10');
+    jvcCleanerScriptMenuInputScoreDown.value = '-10';
   }
 }
