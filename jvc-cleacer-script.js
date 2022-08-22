@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JVC Cleaner Script
 // @version      1.0.0
-// @updateURL    
+// @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.js
 // @description  Cleaner pour jeuxvideo.com.
 // @author       David ROMERA <d.romera.11@gmail.com> | Camillz
 // @license      MIT
