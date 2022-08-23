@@ -3,8 +3,10 @@ const jvcCleanerTopComments = document.location.href.replace('https://www.jeuxvi
 /** **************************************************************************************************************
  *  REMOVE SECTION ON HOMEPAGE
  ************************************************************************************************************** */
-if (jvcCleanerTopComments[0] === 'news' && '1' === localStorage.getItem('input-score-show')) {
-
+if (null === localStorage.getItem('input-score-show')) {
+  localStorage.setItem('input-score-show', '1');
+}
+else if (jvcCleanerTopComments[0] === 'news' && '1' === localStorage.getItem('input-score-show')) {
   const interval = setInterval(() => {
     var linkPlusDeComm = document.querySelector('.link-plus-de-comm');
 
