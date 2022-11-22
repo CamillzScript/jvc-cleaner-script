@@ -24,37 +24,37 @@ function startScript() {
       document.querySelector('.layout__contentMain').style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('derniers-test').toString()) {
+    if ('0' === localStorage.getItem('derniers-test').toString() && undefined !== sections[0]) {
       sections[0].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-news-de-jeux')) {
+    if ('0' === localStorage.getItem('dernieres-news-de-jeux') && undefined !== sections[1]) {
       sections[1].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('derniers-videos-test-de-jeux')) {
+    if ('0' === localStorage.getItem('derniers-videos-test-de-jeux') && undefined !== sections[2]) {
       sections[2].style.display = 'none';
       document.querySelector('.layout__content .secondaryNav').setAttribute('style', 'display: none !important');
     }
 
-    if ('0' === localStorage.getItem('jeux-les-plus-populaires')) {
+    if ('0' === localStorage.getItem('jeux-les-plus-populaires') && undefined !== sections[3]) {
       sections[3].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-astuces')) {
+    if ('0' === localStorage.getItem('dernieres-astuces') && undefined !== sections[4]) {
       sections[4].style.display = 'none';
       document.querySelector('.layout__content .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
     }
 
-    if ('0' === localStorage.getItem('les-jeux-les-plus-attendus')) {
+    if ('0' === localStorage.getItem('les-jeux-les-plus-attendus') && undefined !== sections[5]) {
       sections[5].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('meilleurs-jeux-du-moment')) {
+    if ('0' === localStorage.getItem('meilleurs-jeux-du-moment') && undefined !== sections[6]) {
       sections[6].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-videos-gameplay')) {
+    if ('0' === localStorage.getItem('dernieres-videos-gameplay') && undefined !== sections[7]) {
       sections[7].style.display = 'none';
     }
 
