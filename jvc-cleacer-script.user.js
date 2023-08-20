@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         JVC Cleaner Script
 // @description  Cleaner pour jeuxvideo.com.
-// @author       David ROMERA <d.romera.11@gmail.com> | Camillz
+// @author       David ROMERA <d.romera.11@gmail.com> | Martingoa | https://www.jeuxvideo.com/profil/martingoa
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.44
+// @version      1.0.47
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -98,19 +98,26 @@ function jvcCleanerScriptLoadMenu() {
   const jvcCleanerScriptMenuCheckboxItemList = [
     ['en-ce-moment', 'EN CE MOMENT'],
     ['dernieres-news-jv', 'DERNIÈRES NEWS JV'],
-    ['derniers-test', 'DERNIERS TESTS'],
+    ['bon-plans-high-tech', 'BON PLANS HIGH TECH'],
+    ['top-news-gaming-de-la-semaine', 'TOP NEWS GAMING DE LA SEMAINE'],
+    ['derniers-tests', 'DERNIERS TESTS'],
     ['dernieres-news-de-jeux', 'DERNIÈRES NEWS DE JEUX'],
-    ['derniers-videos-test-de-jeux', 'DERNIÈRES VIDÉOS TESTS DE JEUX'],
+    ['dernieres-videos-de-jeux', 'DERNIÈRES VIDÉOS TESTS DE JEUX'],
     ['jeux-les-plus-populaires', 'JEUX LES PLUS POPULAIRES'],
     ['dernieres-astuces', 'DERNIÈRES ASTUCES'],
     ['les-jeux-les-plus-attendus', 'LES JEUX LES PLUS ATTENDUS'],
     ['meilleurs-jeux-du-moment', 'MEILLEURS JEUX DU MOMENT'],
-    ['dernieres-videos-gameplay', 'DERNIÈRES VIDÉOS GAMEPLAY'],
-    ['bon-plans-high-tech', 'BON PLANS HIGH TECH'],
-    ['derniers-test-high-tech', 'DERNIERS TESTS HIGH-TECH'],
-    ['derniers-guides-d-achat', 'DERNIERS GUIDES D\'ACHAT'],
-    ['dernieres-news-hardware', 'DERNIÈRES NEWS HARDWARE'],
-    ['nos-emissions', 'NOS ÉMISSIONS']
+      ['dernieres-videos-gameplay', 'DERNIÈRES VIDÉOS GAMEPLAY'],
+      ['top-bon-plans-de-la-semaine', 'TOP BON PLANS DE LA SEMAINE'],
+      ['top-news-jv-tech-du-mois', 'TOP NEWS JVTECH DU MOIS'],
+      ['derniers-guides-d-achat', 'DERNIERS GUIDES D\'ACHAT'],
+      ['top-guides-d-achat', 'TOP GUIDES D\'ACHAT'],
+      ['derniers-tests-high-tech', 'DERNIERS TESTS HIGH-TECH'],
+      ['top-test-hight-tech', 'TOP TESTS HIGH-TECH'],
+      ['dernieres-news-jvtech', 'DERNIÈRES NEWS JVTECH'],
+      ['nos-emissions', 'NOS ÉMISSIONS'],
+      ['top-forums-de-jeux', 'TOP FORUMS DE JEUX'],
+      ['autres-forums', 'AUTRES FORUMS']
   ];
 
   let htmlMenuElement = '';
@@ -219,6 +226,8 @@ startScript();
 function startScript() {
   if ('/' === path) {
     const sections = document.querySelectorAll('.layout__content section');
+    const sectionsBis = document.querySelectorAll('.layout__contentAfter section');
+    const sectionsBisFucker = document.querySelectorAll('.layout__contextBottom section');
     const jvTechSections = document.querySelectorAll('.layout__contentAfter section');
     let jvsCleanerScriptIsSections = true;
     let jvcCleanerScriptIsJvTechSections = true;
@@ -232,73 +241,96 @@ function startScript() {
       document.querySelector('.layout__contentMain').style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('derniers-test').toString() && undefined !== sections[0]) {
+    if ('0' === localStorage.getItem('bon-plans-high-tech').toString() && undefined !== sections[0]) {
       sections[0].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-news-de-jeux') && undefined !== sections[1]) {
+    if ('0' === localStorage.getItem('top-news-gaming-de-la-semaine') && undefined !== sections[1]) {
       sections[1].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('derniers-videos-test-de-jeux') && undefined !== sections[2]) {
+    if ('0' === localStorage.getItem('derniers-tests') && undefined !== sections[2]) {
       sections[2].style.display = 'none';
       document.querySelector('.layout__content .secondaryNav').setAttribute('style', 'display: none !important');
     }
 
-    if ('0' === localStorage.getItem('jeux-les-plus-populaires') && undefined !== sections[3]) {
+    if ('0' === localStorage.getItem('dernieres-news-de-jeux') && undefined !== sections[3]) {
       sections[3].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-astuces') && undefined !== sections[4]) {
+    if ('0' === localStorage.getItem('dernieres-videos-de-jeux') && undefined !== sections[4]) {
       sections[4].style.display = 'none';
       document.querySelector('.layout__content .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
     }
 
-    if ('0' === localStorage.getItem('les-jeux-les-plus-attendus') && undefined !== sections[5]) {
+    if ('0' === localStorage.getItem('jeux-les-plus-populaires') && undefined !== sections[5]) {
       sections[5].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('meilleurs-jeux-du-moment') && undefined !== sections[6]) {
+    if ('0' === localStorage.getItem('dernieres-astuces') && undefined !== sections[6]) {
       sections[6].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-videos-gameplay') && undefined !== sections[7]) {
+    if ('0' === localStorage.getItem('les-jeux-les-plus-attendus') && undefined !== sections[7]) {
       sections[7].style.display = 'none';
     }
 
-    if (!jvsCleanerScriptIsSections) {
-        document.querySelector('.layout__content').style.display = 'none';
+    if ('0' === localStorage.getItem('meilleurs-jeux-du-moment') && undefined !== sections[8]) {
+      sections[8].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('bon-plans-high-tech')) {
-      jvTechSections[0].style.display = 'none';
+    if ('0' === localStorage.getItem('dernieres-videos-gameplay') && undefined !== sections[9]) {
+      sections[9].style.display = 'none';
+      document.querySelector('.layout__contentAfter .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
     }
 
-    if ('0' === localStorage.getItem('derniers-test-high-tech')) {
-      jvTechSections[1].style.display = 'none';
+    if ('0' === localStorage.getItem('top-bon-plans-de-la-semaine') && undefined !== sectionsBis[0]) {
+        sectionsBis[0].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('derniers-guides-d-achat')) {
-      jvTechSections[2].style.display = 'none';
+    if ('0' === localStorage.getItem('top-news-jv-tech-du-mois') && undefined !== sectionsBis[1]) {
+        sectionsBis[1].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('dernieres-news-hardware')) {
-      jvTechSections[3].style.display = 'none';
+    if ('0' === localStorage.getItem('derniers-guides-d-achat') && undefined !== sectionsBis[2]) {
+        sectionsBis[2].style.display = 'none';
     }
 
-    if (!jvcCleanerScriptIsJvTechSections) {
-        document.querySelector('.layout__contentAfter').style.display = 'none';
+    if ('0' === localStorage.getItem('top-guides-d-achat') && undefined !== sectionsBis[3]) {
+        sectionsBis[3].style.display = 'none';
     }
 
-    if ('0' === localStorage.getItem('nos-emissions')) {
-      document.querySelector('.layout__contextBottom').style.display = 'none';
+    if ('0' === localStorage.getItem('derniers-tests-high-tech') && undefined !== sectionsBis[4]) {
+        sectionsBis[4].style.display = 'none';
     }
+
+    if ('0' === localStorage.getItem('top-test-hight-tech') && undefined !== sectionsBis[5]) {
+        sectionsBis[5].style.display = 'none';
+    }
+
+    if ('0' === localStorage.getItem('dernieres-news-jvtech') && undefined !== sectionsBis[6]) {
+        sectionsBis[6].style.display = 'none';
+    }
+
+    if ('0' === localStorage.getItem('nos-emissions') && undefined !== sectionsBisFucker[0]) {
+        sectionsBisFucker[0].style.display = 'none';
+    }
+
+    if ('0' === localStorage.getItem('top-forums-de-jeux') && undefined !== sectionsBisFucker[1]) {
+        sectionsBisFucker[1].style.display = 'none';
+    }
+
+    if ('0' === localStorage.getItem('autres-forums') && undefined !== sectionsBisFucker[2]) {
+        sectionsBisFucker[2].style.display = 'none';
+    }
+
 
     document.querySelector('.layout__content .pt-5').setAttribute('style', 'padding-top: 0 !important');
     document.querySelector('.layout__contentAfter .section__groupTitle.mb-5').setAttribute('style', 'display: none !important; margin-bottom: 0 !important');
     document.querySelector('.layout__contentAfter .pt-5').setAttribute('style', 'padding-top: 0 !important');
     document.querySelector('.layout__contentMain .bg-body').setAttribute('style', 'background-color: #282A2F !important');
     document.querySelector('.layout__contentAfter .bg-body').setAttribute('style', 'background-color: #282A2F !important');
+    document.querySelector('.layout__contextBottom .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
 
   }
 
