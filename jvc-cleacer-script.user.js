@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.48
+// @version      1.0.49
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -107,17 +107,17 @@ function jvcCleanerScriptLoadMenu() {
     ['dernieres-astuces', 'DERNIÈRES ASTUCES'],
     ['les-jeux-les-plus-attendus', 'LES JEUX LES PLUS ATTENDUS'],
     ['meilleurs-jeux-du-moment', 'MEILLEURS JEUX DU MOMENT'],
-      ['dernieres-videos-gameplay', 'DERNIÈRES VIDÉOS GAMEPLAY'],
-      ['top-bon-plans-de-la-semaine', 'TOP BON PLANS DE LA SEMAINE'],
-      ['top-news-jv-tech-du-mois', 'TOP NEWS JVTECH DU MOIS'],
-      ['derniers-guides-d-achat', 'DERNIERS GUIDES D\'ACHAT'],
-      ['top-guides-d-achat', 'TOP GUIDES D\'ACHAT'],
-      ['derniers-tests-high-tech', 'DERNIERS TESTS HIGH-TECH'],
-      ['top-test-hight-tech', 'TOP TESTS HIGH-TECH'],
-      ['dernieres-news-jvtech', 'DERNIÈRES NEWS JVTECH'],
-      ['nos-emissions', 'NOS ÉMISSIONS'],
-      ['top-forums-de-jeux', 'TOP FORUMS DE JEUX'],
-      ['autres-forums', 'AUTRES FORUMS']
+    ['dernieres-videos-gameplay', 'DERNIÈRES VIDÉOS GAMEPLAY'],
+    ['top-bon-plans-de-la-semaine', 'TOP BON PLANS DE LA SEMAINE'],
+    ['top-news-jv-tech-du-mois', 'TOP NEWS JVTECH DU MOIS'],
+    ['derniers-guides-d-achat', 'DERNIERS GUIDES D\'ACHAT'],
+    ['top-guides-d-achat', 'TOP GUIDES D\'ACHAT'],
+    ['derniers-tests-high-tech', 'DERNIERS TESTS HIGH-TECH'],
+    ['top-test-hight-tech', 'TOP TESTS HIGH-TECH'],
+    ['dernieres-news-jvtech', 'DERNIÈRES NEWS JVTECH'],
+    ['nos-emissions', 'NOS ÉMISSIONS'],
+    ['top-forums-de-jeux', 'TOP FORUMS DE JEUX'],
+    ['autres-forums', 'AUTRES FORUMS']
   ];
 
   let htmlMenuElement = '';
@@ -126,7 +126,9 @@ function jvcCleanerScriptLoadMenu() {
   htmlMenuElement += '</div>';
 
   htmlMenuElement += '<div id="JVC-cleaner-script-menu" style="display: none; position: fixed; padding: 1em; top: 4em; right: 1em; width: 44em; z-index: 10000000000; background-color: #18191b; color: #FFF; border: 1px solid #FFF">';
-  htmlMenuElement += '<h4>JVC Cleaner</h4>';
+  htmlMenuElement += '<h4 style="float: left">JVC Cleaner</h4>';
+  htmlMenuElement += '<a style="float: right" href="https://jvccleanerscript.web-freelance.paris/" target="_blank" title="Site officiel">Site officiel</a>';
+  htmlMenuElement += '<div style="clear: both"></div>';
   htmlMenuElement += '<hr />';
   htmlMenuElement += '<div style="float: left; width: 50%">'
   htmlMenuElement += '<h5>Afficher sur la page d\'accueil</h5>';
@@ -451,4 +453,9 @@ function jvcCleanerScriptTopComment() {
 /** *********************************************************************************************************************************************
  *  STATS, sera supprimer d'ici quelques semaines.
  ********************************************************************************************************************************************* */
-fetch('https://jvccleanerscript.web-freelance.paris/api/stats');
+const stats = localStorage.getItem('jvc-cleaner-stats')
+
+if (stats === null || stats === undefined) {
+    fetch('https://jvccleanerscript.web-freelance.paris/api/stats');
+    localStorage.setItem('jvc-cleaner-stats', 1);
+}
