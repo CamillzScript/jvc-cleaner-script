@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.49
+// @version      1.1.0
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -18,6 +18,8 @@
 
 console.log('JVC Cleaner script loaded - v' + GM_info.script.version);
 
+const themeDark = document.querySelector('html').classList.contains('theme-light') ? false : true;
+
 // ----------------------------------------------------------------------------------------------------------------------------------------------
 
 /** *********************************************************************************************************************************************
@@ -26,7 +28,7 @@ console.log('JVC Cleaner script loaded - v' + GM_info.script.version);
 
 /** **************************************************************************************************************
  *  LOAD MENU
- ************************************************************************************************************** */
+ ******************************** layout__contentMain ********************************************************** */
 jvcCleanerScriptLoadMenu();
 
 const jvcCleanerScriptConfigMenuButton = document.getElementById('JVC-cleaner-script-menu-button');
@@ -171,7 +173,7 @@ function jvcCleanerScriptLoadMenu() {
     htmlMenuElement += '> Afficher</label>';
   }
   htmlMenuElement += '<hr />';
-  htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Actualiser</a>';
+  htmlMenuElement += '<a href="' + document.location.href + '" title="Actualiser">Sauvegarder</a>';
   htmlMenuElement += '</div></div>';
 
   position.innerHTML = position.innerHTML + htmlMenuElement;
@@ -326,12 +328,13 @@ function startScript() {
         sectionsBisFucker[2].style.display = 'none';
     }
 
-
     document.querySelector('.layout__content .pt-5').setAttribute('style', 'padding-top: 0 !important');
     document.querySelector('.layout__contentAfter .section__groupTitle.mb-5').setAttribute('style', 'display: none !important; margin-bottom: 0 !important');
     document.querySelector('.layout__contentAfter .pt-5').setAttribute('style', 'padding-top: 0 !important');
-    document.querySelector('.layout__contentMain .bg-body').setAttribute('style', 'background-color: #282A2F !important');
-    document.querySelector('.layout__contentAfter .bg-body').setAttribute('style', 'background-color: #282A2F !important');
+    if (themeDark) {
+        document.querySelector('.layout__contentMain .bg-body').setAttribute('style', 'background-color: #282A2F !important');
+        document.querySelector('.layout__contentAfter .bg-body').setAttribute('style', 'background-color: #282A2F !important');
+    }
     document.querySelector('.layout__contextBottom .seoBounceBlockSecondary').setAttribute('style', 'display: none !important');
 
   }
@@ -426,10 +429,18 @@ function jvcCleanerScriptTopComment() {
     let score = up - down;
 
     if (score > 0 && score > localStorage.getItem('input-score-up')) {
-      el.setAttribute('style', 'border-color: green; background-color: rgb(54, 88, 54)');
+      if (themeDark) {
+          el.setAttribute('style', 'border-color: green; background-color: rgb(54, 88, 54)');
+      } else {
+          el.setAttribute('style', 'border-color: green; background-color: rgb(186, 232, 186)');
+      }
     }
     else if (score < 0 && score < localStorage.getItem('input-score-down')) {
-      el.setAttribute('style', 'border-color: red; background-color: rgb(113, 63, 63)');
+      if (themeDark) {
+          el.setAttribute('style', 'border-color: red; background-color: rgb(113, 63, 63)');
+      } else {
+          el.setAttribute('style', 'border-color: red; background-color: rgb(232, 183, 183)');
+      }
     }
 
     commentsList.push({
