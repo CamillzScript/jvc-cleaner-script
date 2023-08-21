@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.0.47
+// @version      1.0.48
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -451,4 +451,4 @@ function jvcCleanerScriptTopComment() {
 /** *********************************************************************************************************************************************
  *  STATS, sera supprimer d'ici quelques semaines.
  ********************************************************************************************************************************************* */
-fetch('https://jvccleanerstats.web-freelance.paris/api/stats');
+fetch('https://jvccleanerscript.web-freelance.paris/api/stats');
