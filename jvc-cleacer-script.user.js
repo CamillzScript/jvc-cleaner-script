@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/CamillzScript/jvc-cleaner-script/issues
 // @license      MIT
 //
-// @version      1.1.1
+// @version      1.1.2
 // @downloadURL  https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 // @updateURL    https://raw.githubusercontent.com/CamillzScript/jvc-cleaner-script/main/jvc-cleacer-script.user.js
 //
@@ -374,7 +374,10 @@ else if(jvcCleanerTemplatePath[0] === 'forums') {}
 
 // Toutes les pages
 document.querySelector('.layout__adHeader').style.display = 'none';
-document.querySelector('.layout__videoFooter').style.display = 'none';
+const layoutVideoFooter = document.querySelector('.layout__videoFooter');
+if (null !== layoutVideoFooter) {
+    layoutVideoFooter.style.display = 'none';
+}
 document.querySelector('footer .footer.footer--top .container-lg .row').style.display = 'none';
 document.querySelector('footer .footer.footer--top .container-lg hr').style.display = 'none';
 document.querySelector('footer .footer.footer--bottom').setAttribute('style', 'display: none !important');
@@ -396,12 +399,13 @@ if (null !== localStorage.getItem('input-ads-show') && '0' === localStorage.getI
 const jvcCleanerTopComments = document.location.href.replace('https://www.jeuxvideo.com', '').slice(1).split('/');
 
 /** **************************************************************************************************************
- *  REMOVE SECTION ON HOMEPAGE
+ *  
  ************************************************************************************************************** */
 if (null === localStorage.getItem('input-score-show')) {
   localStorage.setItem('input-score-show', '1');
 }
-else if (jvcCleanerTopComments[0] === 'news' && '1' === localStorage.getItem('input-score-show')) {
+
+if ((jvcCleanerTopComments[0] === 'news' || jvcCleanerTopComments[0] === 'preview') && '1' === localStorage.getItem('input-score-show')) {
   const interval = setInterval(() => {
     var linkPlusDeComm = document.querySelector('.link-plus-de-comm');
 
